@@ -202,15 +202,15 @@ nav h1 {
   padding: 16px 20px;
   font-size: 1.1rem;
   font-weight: 500;
-  background: #fff;
-  border: 1px solid #e0e0e0;
+  background: #181818;
+  border: 1px solid #121212;
   border-radius: 12px;
   transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 
 #portfolio a:hover {
-  background: #000;
-  color: #fff;
+  background: #0521d9;
+  color: #ed0a0a;
   transform: translateX(4px);
 }
 
