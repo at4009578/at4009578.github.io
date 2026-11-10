@@ -8,7 +8,7 @@
       .box {
         width: 70px;
         height: 70px;
-        background-color: teal;
+        background-color: rgb(7, 56, 252);
         font-size: 300%;
         text-align: center;
         user-select: none;
@@ -69,7 +69,11 @@
         //////////////////////////////////////////////////////////////////
 
         // TODO 2 - Variable declarations
-
+        var positionX = 0;
+        var points = 0;
+        var speed = 10;
+        
+  
 
 
 
@@ -80,11 +84,17 @@
          * If the box drifts off the screen, turn it around!
          */
         function update() {
-
-        
-
+          positionX = positionX + speed;
+          moveBoxTo(positionX);
+          if (positionX > boardWidth) {
+            speed = speed * -1;
           
+          }
+          else if (positionX < 0) {
+            speed = speed * -1
+          }
         }
+
 
         /**
          * This Function will be called each time the box is clicked.
@@ -94,7 +104,10 @@
          * - move the box to the left side of the screen.
          */
         function handleBoxClick() {
-
+          positionX = 0;
+          changeBoxText(points);
+          points = points + 1;
+          speed = 3 * points + 10;
 
 
 
